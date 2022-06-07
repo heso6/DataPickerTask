@@ -1,12 +1,11 @@
 package Base;
 
-import data.DataPickersPage;
+import dataPicker.DataPickersPage;
 import org.testng.annotations.BeforeMethod;
 
-public class PageBase extends TestBase {
+public class Page extends TestBase {
 
     public DataPickersPage dataPickersPage;
-
 
     @BeforeMethod
     public void pagesSetup() {
