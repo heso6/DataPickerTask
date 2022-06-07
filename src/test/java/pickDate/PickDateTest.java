@@ -21,7 +21,7 @@ public class PickDateTest extends Page {
 
 
     @Test
-    public void shouldPickDataByForLoopTableDataPicker() {
+    public void shouldPickDataByForLoop() {
 
         dataPickersPage
                 .shouldClickOnDataPickerInput()
@@ -33,7 +33,7 @@ public class PickDateTest extends Page {
 
 
     @Test
-    public void shouldPickDataByWhileLoopTableDataPicker() {
+    public void shouldPickDataByWhileLoop() {
 
         dataPickersPage
                 .shouldClickOnDataPickerInput()
@@ -45,7 +45,7 @@ public class PickDateTest extends Page {
     }
 
     @Test
-    public void shouldPickDataAndYearByWhileLoopTableDataPicker() {
+    public void shouldPickDataAndYearByWhileLoop() {
 
         dataPickersPage
                 .shouldClickOnDataPickerInput()
