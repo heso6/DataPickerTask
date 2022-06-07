@@ -9,50 +9,50 @@ public class PickDateTest extends Page {
 
 
     @Test
-    public void shouldSetDataBySendKeys() {
+    public void shouldSetDateBySendKeys() {
 
-        dataPickersPage
+        datePickersPage
                 .shouldSetData("08/31/2022")
                 .getDataValueFromInput();
-        Assert.assertEquals(dataPickersPage.getDataValueFromInput(), "08/31/2022");
-        System.out.println(dataPickersPage.getDataValueFromInput());
+        Assert.assertEquals(datePickersPage.getDataValueFromInput(), "08/31/2022");
+        System.out.println(datePickersPage.getDataValueFromInput());
 
     }
 
 
     @Test
-    public void shouldPickDataByForLoop() {
+    public void shouldPickDateByForLoop() {
 
-        dataPickersPage
+        datePickersPage
                 .shouldClickOnDataPickerInput()
                 .changeMonthLoopByForLoop()
                 .shouldClickOnTheLastDayOfAugust();
-        Assertions.assertThat(dataPickersPage.getDataValueFromInput()).isEqualTo("08/31/2022");
-        System.out.println(dataPickersPage.getDataValueFromInput());
+        Assertions.assertThat(datePickersPage.getDataValueFromInput()).isEqualTo("08/31/2022");
+        System.out.println(datePickersPage.getDataValueFromInput());
     }
 
 
     @Test
-    public void shouldPickDataByWhileLoop() {
+    public void shouldPickDateByWhileLoop() {
 
-        dataPickersPage
+        datePickersPage
                 .shouldClickOnDataPickerInput()
                 .changeMontWhileLoop("August")
                 .shouldClickOnTheLastDayOfAugust();
 
-        Assertions.assertThat(dataPickersPage.getDataValueFromInput()).isEqualTo("08/31/2022");
-        System.out.println(dataPickersPage.getDataValueFromInput());
+        Assertions.assertThat(datePickersPage.getDataValueFromInput()).isEqualTo("08/31/2022");
+        System.out.println(datePickersPage.getDataValueFromInput());
     }
 
     @Test
-    public void shouldPickDataAndYearByWhileLoop() {
+    public void shouldPickDateAndYearByWhileLoop() {
 
-        dataPickersPage
+        datePickersPage
                 .shouldClickOnDataPickerInput()
                 .changeMontAndYearWhileLoop("August", "2022")
                 .shouldClickOnTheLastDayOfAugust();
 
-        Assertions.assertThat(dataPickersPage.getDataValueFromInput()).isEqualTo("08/31/2022");
-        System.out.println(dataPickersPage.getDataValueFromInput());
+        Assertions.assertThat(datePickersPage.getDataValueFromInput()).isEqualTo("08/31/2022");
+        System.out.println(datePickersPage.getDataValueFromInput());
     }
 }

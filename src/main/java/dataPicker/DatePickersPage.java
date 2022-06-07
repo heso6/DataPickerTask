@@ -7,10 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class DataPickersPage extends BasePage {
+public class DatePickersPage extends BasePage {
 
 
-    public DataPickersPage(WebDriver driver) {
+    public DatePickersPage(WebDriver driver) {
         super(driver);
     }
 
@@ -32,17 +32,17 @@ public class DataPickersPage extends BasePage {
     private WebElement lastDayOfAugust;
 
 
-    public DataPickersPage shouldClickOnDataPickerInput() {
+    public DatePickersPage shouldClickOnDataPickerInput() {
         click(dataPickerInput);
         return this;
     }
 
-    public DataPickersPage shouldSetData(String data) {
+    public DatePickersPage shouldSetData(String data) {
         sendKeys(dataPickerInput, data);
         return this;
     }
 
-    public DataPickersPage shouldClickNextMonthButton() {
+    public DatePickersPage shouldClickNextMonthButton() {
         click(nextMonthButton);
         return this;
     }
@@ -51,7 +51,7 @@ public class DataPickersPage extends BasePage {
         return dataPickerInput.getAttribute("value");
     }
 
-    public DataPickersPage changeMonthLoopByForLoop() {
+    public DatePickersPage changeMonthLoopByForLoop() {
         for (int i = 0; i <= 1; i++) {
             shouldClickNextMonthButton();
         }
@@ -66,21 +66,21 @@ public class DataPickersPage extends BasePage {
         return yearValue.getText();
     }
 
-    public DataPickersPage changeMontWhileLoop(String month) {
+    public DatePickersPage changeMontWhileLoop(String month) {
         while (!(getMonthValue().equals(month))) {
             shouldClickNextMonthButton();
         }
         return this;
     }
 
-    public DataPickersPage changeMontAndYearWhileLoop(String month, String year) {
+    public DatePickersPage changeMontAndYearWhileLoop(String month, String year) {
         while (!(getMonthValue().equals(month) && (getYearValue().equals(year)))) {
             shouldClickNextMonthButton();
         }
         return this;
     }
 
-    public DataPickersPage shouldClickOnTheLastDayOfAugust() {
+    public DatePickersPage shouldClickOnTheLastDayOfAugust() {
         click(lastDayOfAugust);
         return this;
     }
